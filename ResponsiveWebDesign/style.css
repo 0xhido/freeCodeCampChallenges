@@ -170,6 +170,7 @@ slides>* {
     width: 1.5rem;
     height: 1.5rem;
     background: white;
+    color: black;
     text-decoration: none;
     align-items: center;
     justify-content: center;
@@ -183,8 +184,13 @@ slides>* {
 }
 
 #tribute-info>a:focus {
-    background: #000;
+    background: #ff935c;
 }
+
+#tribute-info>a:focus {
+    color: black;
+}
+
 
 .slide {
     display: block !important;
