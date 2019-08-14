@@ -94,14 +94,18 @@ body {
 }
 
 .description>img {
+    position: relative;
     height: 300px;
     width: auto;
     float: right;
+    bottom: -37px;
     margin-right: 10%;
+    z-index: 1;
 }
 
 .description>h1 {
     position: relative;
+    top: 40px;
     margin-left: 10%;
     font-size: 100px;
 }
