@@ -16,42 +16,42 @@
         </header>
         <main>
             <form action="post" id="survey-form">
-        
+
                 <label class="question-label" id="name-label" for="name">Name: </label>
                 <div id="name-div" class="input-area">
                     <input type="text" name="name" id="name" placeholder="Enter dog's name" required>
                 </div>
-        
+
                 <label class="question-label" id="email-label" for="email">Email: </label>
                 <div id="email-div" class="input-area">
                     <input type="email" name="email" id="email" placeholder="Enter your email" required>
                 </div>
-        
+
                 <label class="question-label" id="number-label" for="number">Phone Number: </label>
                 <div id="number-div" class="input-area">
-                    <input type="tel" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
-                        name="number" id="number" placeholder="Enter your number" required>
+                    <input type="number" name="number" id="number" placeholder="Enter your number" min="0"
+                        max="999999999" required>
                 </div>
-        
+
                 <label class="question-label" for="gender">Gender: </label>
                 <div id="gender-div" class="input-area">
-                    <input type="radio" name="gender" id="gender-male">
+                    <input type="radio" name="gender" id="gender-male" value="gender-male">
                     <label for="gender-male">Male</label>
-                    <input type="radio" name="gender" id="gender-female">
+                    <input type="radio" name="gender" id="gender-female" value="gender-female">
                     <label id="female-label" for="gender-female">Female</label>
                 </div>
-        
+
                 <label class="question-label" id="looking-for-label" for="looking-for">Looking for: </label>
                 <div id="looking-for-div" class="input-area">
-                    <input type="radio" name="looking-for" id="looking-for-male">
+                    <input type="radio" name="looking-for" id="looking-for-male" value="looking-for-male">
                     <label id="male-label" for="looking-for-male">Male</label>
-                    <input type="radio" name="looking-for" id="looking-for-female">
+                    <input type="radio" name="looking-for" id="looking-for-female" value="looking-for-female">
                     <label id="female-label" for="looking-for-female">Female</label>
                 </div>
-        
+
                 <label class="question-label" for="size">Dog's size: </label>
                 <div id="size-div" class="input-area">
-                    <select name="size" id="size">
+                    <select name="size" id="dropdown">
                         <option value="big">Big</option>
                         <option value="medium">Medium</option>
                         <option value="small">Small</option>
@@ -59,7 +59,7 @@
                         <option value="invisible">Invisible</option>
                     </select>
                 </div>
-        
+
                 <label class="question-label" for="toys">Faivorite toys: </label>
                 <div id="toys-div" class="input-area">
                     <div class="toy-option">
@@ -87,17 +87,17 @@
                         <label for="homework">Homework</label>
                     </div>
                 </div>
-        
+
                 <label class="question-label" for="dog-description">Description: </label>
                 <div id="dog-description-div" class="input-area">
                     <textarea name="dog-description" id="dog-description" cols="30" rows="10"
-                       placeholder="Describe your dog as much as you can!"></textarea>
+                        placeholder="Describe your dog as much as you can!"></textarea>
                 </div>
-                <button type="submit">Find match!</button>
+                <button type="submit" id="submit">Find match!</button>
             </form>
         </main>
-    </ id="wrapper">
+        </ id="wrapper">
 </body>
-<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </html>
