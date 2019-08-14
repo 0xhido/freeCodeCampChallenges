@@ -114,3 +114,10 @@ button {
     background: #20639B;
     color: white;   
 }
+
+footer {
+    position: relative;
+    text-align: center;
+    bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
