@@ -44,6 +44,13 @@ body {
     background-color: #ff935c;
 }
 
+#img-div>#image {
+    display: block;
+    max-width: 50px;
+    height: auto;
+    margin: auto;
+}
+
 .img-div>img {
     width: 200%;
     height: calc(100% - 10vh);
@@ -190,7 +197,6 @@ slides>* {
 #tribute-info>a:focus {
     color: black;
 }
-
 
 .slide {
     display: block !important;
