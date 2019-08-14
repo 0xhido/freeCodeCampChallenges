@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">
+            SIGN UP
+        </h1>
+        <p id="description">
+            Sign up your dog to our new dating app!
+        </p>
+    </header>
+    <main>
+        <form action="post" id="survey-form">
+
+            <div>
+                <label id="name-label" for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="Enter dog's name" required>
+                <label id="email-label" for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <label id="number-label" for="number">Phone Number: </label>
+                <input type="tel" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" name="number" id="number" placeholder="Enter your number" required>
+            </div>
+            
+            <div>
+                <label id="gender-label" for="gender">Dog's gender: </label>
+                <label id="male-label" for="gender-male">Male</label>
+                <input type="radio" name="gender" id="gender-male">
+                <label id="female-label" for="gender-female">Female</label>
+                <input type="radio" name="gender" id="gender-female"> 
+            </div>
+
+            <div>
+                <label id="looking-for-label" for="looking-for">Looking for: </label>
+                <label id="male-label" for="looking-for-male">Male</label>
+                <input type="radio" name="looking-for" id="looking-for-male">
+                <label id="female-label" for="looking-for-female">Female</label>
+                <input type="radio" name="looking-for" id="looking-for-female">        
+            </div>
+
+            <div>
+                <label for="size">Dog's size: </label>
+                <select name="size" id="size">
+                    <option value="big">Big</option>
+                    <option value="medium">Medium</option>
+                    <option value="small">Small</option>       
+                    <option value="tiny">Tiny</option>
+                    <option value="invisible">Invisible</option>
+                </select>
+            </div>
+            <div>
+                <label for="toys">Faivorite toys: </label> 
+                <input type="checkbox" name="toys" id="bone" value="bone">
+                <label for="bone">Bone</label>
+                <input type="checkbox" name="toys" id="rubber-duck" value="rubber-duck">
+                <label for="rubber-duck">Rubber Duck</label>
+                <input type="checkbox" name="toys" id="tennis-ball" value="tennis-ball">
+                <label for="tennis-ball">Tennis Ball</label>
+                <input type="checkbox" name="toys" id="rope" value="rope">
+                <label for="rope">Rope</label>
+                <input type="checkbox" name="toys" id="teddy-bear" value="teddy-bear">
+                <label for="teddy-bear">Teddy Bear</label>
+                <input type="checkbox" name="toys" id="homework" value="homework">
+                <label for="homework">Homework</label>
+            </div>
+            <div>
+                <label for="dog-description">Description: </label>
+                <textarea name="dog-description" id="dog-description" cols="30" rows="10" placeholder="Describe your dog as much as you can!"></textarea>
+            </div>
+            <div>
+                <button type="submit">Find match!</button>
+            </div>
+        </form>
+    </main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
