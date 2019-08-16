@@ -96,12 +96,12 @@ body {
         height: calc(100vh - 50px);
         background: var(--light-color);
         top: 50px;
-        left: 0;
+        left: -100%;
         transition: 0.5s;
         border-top: 1px solid rgba(0, 0, 0, .2);
     }
     #header #nav-bar.active {
-        left: -100%;
+        left: 0;
     }
     #header #nav-bar ul {
         display: block;
