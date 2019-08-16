@@ -115,6 +115,12 @@ button {
     color: white;   
 }
 
+button:active {
+    background-color: white;
+    color: #20639B;
+    transition: 0.5s;
+}
+
 footer {
     position: relative;
     text-align: center;

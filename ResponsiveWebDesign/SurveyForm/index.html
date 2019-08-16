@@ -29,7 +29,8 @@
 
                 <label class="question-label" id="number-label" for="number">Phone Number: </label>
                 <div id="number-div" class="input-area">
-                    <input type="number" name="number" id="number" placeholder="Enter your number" min="0"
+                    <!-- Better idea is to use tel type but I needed to use number type for passing the tests. -->
+                    <input type="number" name="number" id="number" placeholder="Enter your number" minlength="5" min="009999999"
                         max="999999999" required>
                 </div>
 
@@ -60,7 +61,7 @@
                     </select>
                 </div>
 
-                <label class="question-label" for="toys">Faivorite toys: </label>
+                <label class="question-label" for="toys">Favorite toys: </label>
                 <div id="toys-div" class="input-area">
                     <div class="toy-option">
                         <input type="checkbox" name="toys" id="bone" value="bone">
