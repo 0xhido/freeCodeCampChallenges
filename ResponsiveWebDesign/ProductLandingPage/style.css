@@ -23,14 +23,6 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
-/* 
-.test {
-    position: absolute;
-    top: 50px;
-    height: 120vh;
-    width: 100%;
-    background: var(--primary-color);
-} */
 
 #header .logo>* {
     display: block;
