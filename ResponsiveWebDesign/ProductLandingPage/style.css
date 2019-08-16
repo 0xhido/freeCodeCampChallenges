@@ -8,11 +8,14 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
     font-family: sans-serif;
 }
 
 #header {
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     padding: 0 100px;
@@ -20,6 +23,14 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
+/* 
+.test {
+    position: absolute;
+    top: 50px;
+    height: 120vh;
+    width: 100%;
+    background: var(--primary-color);
+} */
 
 #header .logo>* {
     display: block;
