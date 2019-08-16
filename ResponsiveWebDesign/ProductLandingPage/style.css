@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #03a9f4;
+    --light-color: #67daff;
+    --dark-color: #007ac1;
+    --secondary-color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: var(--light-color, lightblue);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#header .logo>* {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-color, #67daff);
+}
+
+#header #nav-bar {
+    float: right;
+}
+
+#header #nav-bar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#header #nav-bar ul li {
+    list-style: none;
+}
+
+#header #nav-bar ul li a, .visable {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: var(--dark-color, #007ac1);
+    text-decoration: none;
+    display: block;
+}
+
+#header #nav-bar ul li a:hover, .visable:hover {
+    color: var(--light-color);
+    background: var(--dark-color, #007ac1);
+}
+
+.visable {
+    display: none;
+}
+
+.menu-toggle {
+    color: var(--dark-color);
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 750px) {
+    #header {
+        padding: 0 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .visable {
+        position: absolute;
+        padding: 0 20px;
+        width: calc(100% - 40px);
+        display: block;
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        bottom: 0;
+    }
+    #header #nav-bar {
+        position: absolute;
+        width: 80%;
+        height: calc(100vh - 50px);
+        background: var(--light-color);
+        top: 50px;
+        left: 0;
+        transition: 0.5s;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+    }
+    #header #nav-bar.active {
+        left: -100%;
+    }
+    #header #nav-bar ul {
+        display: block;
+        text-align: center;
+    }
+    #header #nav-bar ul a {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+}
