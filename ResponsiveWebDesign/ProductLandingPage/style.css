@@ -5,7 +5,7 @@
     --secondary-color: white;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -15,13 +15,12 @@ body {
 
 #header {
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     padding: 0 100px;
-    background: var(--light-color, lightblue);
     width: 100%;
     box-sizing: border-box;
+    background: var(--secondary-color, lightblue);
 }
 
 #header .logo>* {
@@ -60,7 +59,7 @@ body {
 }
 
 #header #nav-bar ul li a:hover, .visable:hover {
-    color: var(--light-color);
+    color: var(--secondary-color, white);
     background: var(--dark-color, #007ac1);
 }
 
@@ -75,6 +74,77 @@ body {
     font-size: 24px;
     cursor: pointer;
     display: none;
+}
+
+.desc-container {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    top: 50px; /* below the navbar */
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: var(--dark-color);
+}
+
+#desc-title {
+    width: 100%;
+    height: auto;
+    color: white;
+}
+
+.desc-cards {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr); /* TODO: change to 'col wrap' with media query*/
+    width: 100%;
+    height: auto;
+    justify-items: center;
+}
+
+.desc-card {
+    text-align: center;
+    transition: 1s;
+}
+
+.desc-card:hover {
+    transform: scale(1.1);
+}
+
+.desc-cards i {
+    position: relative; 
+    z-index: 1;
+    padding: 20px;
+    justify-items: center;
+    border: 1px solid var(--dark-color);
+    border-radius: 50%;
+    color: var(--dark-color);
+    background: white;
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, .2);
+}
+
+.desc-text {
+    position: relative;
+    z-index: 0;
+    top: -50px;
+    border: 1px solid var(--light-color);
+    height: 250px;
+    width: 250px;
+    background: white;
+    padding-top: 50px;
+    color: rgba(0, 0, 0, .5);
+    line-height: 24px;
+}
+
+.desc-text h1 {
+    height: 50px;
+}
+
+.desc-text p {
+    font-size: 20px;
+    padding: 10px;
 }
 
 @media (max-width: 750px) {
@@ -97,7 +167,7 @@ body {
         position: absolute;
         width: 80%;
         height: calc(100vh - 50px);
-        background: var(--light-color);
+        background: var(--secondary-color);
         top: 50px;
         left: -100%;
         transition: 0.5s;
@@ -112,5 +182,10 @@ body {
     }
     #header #nav-bar ul a {
         border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+    .desc-cards {
+        grid-template-columns: 0;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
     }
 }
