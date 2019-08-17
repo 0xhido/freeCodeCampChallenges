@@ -14,10 +14,12 @@ html, body {
 }
 
 #header {
+    display: block;
     position: fixed;
+    z-index: 3;
     top: 0;
     left: 0;
-    padding: 0 100px;
+    padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
     background: var(--secondary-color, lightblue);
@@ -78,11 +80,13 @@ html, body {
 
 .desc-container {
     display: block;
-    position: absolute;
-    z-index: -1;
+    position: relative;
+    z-index: 0;
     padding: 0;
     margin: 0;
-    top: 50px; /* below the navbar */
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
     height: auto;
     text-align: center;
@@ -98,7 +102,8 @@ html, body {
 .desc-cards {
     display: grid;
     position: relative;
-    grid-template-columns: repeat(3, 1fr); /* TODO: change to 'col wrap' with media query*/
+    grid-template-columns: repeat(3, 1fr);
+    /* TODO: change to 'col wrap' with media query*/
     width: 100%;
     height: auto;
     justify-items: center;
@@ -114,8 +119,8 @@ html, body {
 }
 
 .desc-cards i {
-    position: relative; 
-    z-index: 1;
+    position: relative;
+    z-index: 10;
     padding: 20px;
     justify-items: center;
     border: 1px solid var(--dark-color);
@@ -145,6 +150,103 @@ html, body {
 .desc-text p {
     font-size: 20px;
     padding: 10px;
+}
+
+.video-container {
+    text-align: center;
+    padding: 50px;
+    height: auto;
+}
+
+.video-container>h1 {
+    color: rgba(0, 0, 0, .5);
+}
+
+.pricing-container {
+    text-align: center;
+    padding: 20px 0 40px 0;
+    color: white;
+    background: var(--dark-color);
+}
+
+.pricing-table {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 25%;
+    padding: 10px;
+    max-width: 320px;
+    box-sizing: border-box
+}
+
+.table {
+    background: var(--secondary-color);
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #00000070;
+    color: rgba(0, 0, 0, .5);
+    transition: 0.5s linear;
+}
+
+.table h2 {
+    text-transform: uppercase;
+}
+
+.table ul {
+    margin: 0;
+    padding: 0;
+}
+
+.table ul li {
+    padding: 10px 0;
+    list-style: none;
+}
+
+.price {
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+.price span {
+    display: block;
+    font-size: 14px;
+}
+
+.table a {
+    text-decoration: none;
+    color:  black;
+    border: 1px solid black;
+    display: block;
+    padding: 10px 0;
+    margin: 10px 0;  
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.2s linear;
+}
+
+.table a:hover {
+    background:  var(--light-color);
+}
+
+.table:hover {
+    transform: translateY(-20px);
+}
+
+.pop {
+    background: var(--light-color);
+    color: black;
+    transform: rotate(45deg);
+    padding: 10px 40px;
+    position: absolute;
+    top: 16px;
+    right: -34px;
 }
 
 @media (max-width: 750px) {
@@ -187,5 +289,17 @@ html, body {
         grid-template-columns: 0;
         grid-template-rows: repeat(3, 1fr);
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .col {
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .col {
+        flex: 100%;
     }
 }
