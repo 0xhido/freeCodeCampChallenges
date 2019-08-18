@@ -19,7 +19,7 @@ html, body {
     z-index: 3;
     top: 0;
     left: 0;
-    padding: 0 20px;
+    padding-left: 50px;
     width: 100%;
     box-sizing: border-box;
     background: var(--secondary-color, lightblue);
