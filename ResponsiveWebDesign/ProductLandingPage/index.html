@@ -4,6 +4,7 @@
 <head>
     <script src="https://kit.fontawesome.com/9e9e8e7238.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Landing Page</title>
 </head>
 
@@ -28,7 +29,7 @@
         </div>
     </header>
 
-    <div class="desc-container">
+    <div id="description-div" class="desc-container">
         <div id="desc-title">
             <h1>Performance, Reliability and Simplicity above all!</h1>
         </div>
@@ -57,7 +58,7 @@
         </div>
     </div>
 
-    <div class="video-container">
+    <div id="video-div" class="video-container">
         <h1>Why should you even use cloud hosting?</h1>
         <iframe id="video" src="https://www.youtube.com/embed/4lLskYgpKKo">
         </iframe>
@@ -79,7 +80,7 @@
                         <li><strong>3GB</strong> Storage</li>
                         <li><strong>1</strong> Accounts</li>
                     </ul>
-                    <a href="#">Buy Now</a>
+                    <a href="#video-div">Buy Now</a>
                 </div>
             </div>
             <div class="col">
@@ -133,6 +134,35 @@
             </div>
         </div>
     </div>
+
+
+    <div class="join-us-container">
+        <h1>Join Us Now!</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <label for="name" class="inp">
+                <input type="text" id="name" placeholder="&nbsp;">
+                <span class="label">Full Name</span>
+                <span class="border"></span>
+            </label>
+
+            <label for="email" class="inp">
+                <input type="email" id="email" placeholder="&nbsp;">
+                <span class="label">Email Address</span>
+                <span class="border"></span>
+            </label>
+
+            <input id="submit" type="submit" value="Sign up">
+        </form>
+    </div>
+
+    <footer>
+        <p>Developed by @mryode</p>
+        <nav>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+        </nav>  
+    </footer>
 
 </body>
 

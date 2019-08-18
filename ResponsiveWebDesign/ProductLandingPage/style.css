@@ -10,7 +10,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: sans-serif;
+    font-family: "montserrat", sans-serif;
 }
 
 #header {
@@ -145,6 +145,7 @@ html, body {
 
 .desc-text h1 {
     height: 50px;
+    line-height: 35px;
 }
 
 .desc-text p {
@@ -190,9 +191,9 @@ html, body {
     padding: 40px 20px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 10px #00000070;
+    box-shadow: 0 0 10px #00000050;
     color: rgba(0, 0, 0, .5);
-    transition: 0.5s linear;
+    transition: 0.2s linear;
 }
 
 .table h2 {
@@ -221,18 +222,18 @@ html, body {
 
 .table a {
     text-decoration: none;
-    color:  black;
+    color: black;
     border: 1px solid black;
     display: block;
     padding: 10px 0;
-    margin: 10px 0;  
+    margin: 10px 0;
     text-transform: uppercase;
     font-size: 14px;
     transition: 0.2s linear;
 }
 
 .table a:hover {
-    background:  var(--light-color);
+    background: var(--light-color);
 }
 
 .table:hover {
@@ -247,6 +248,152 @@ html, body {
     position: absolute;
     top: 16px;
     right: -34px;
+}
+
+.join-us-container {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.join-us-container>* {
+    box-sizing: border-box;
+}
+
+form {
+    display: grid;
+    grid-gap: 50px;
+}
+
+.inp, #submit {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+}
+
+.inp .label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 16px;
+    color: #9098a9;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all 0.2s ease;
+}
+
+.inp .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all 0.15s ease;
+}
+
+.inp input {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid var(--primary-color);
+    background: none;
+    border-radius: 0;
+    color: #223254;
+    transition: all 0.15s ease;
+}
+
+.inp input:hover {
+    background: rgba(34, 50, 84, 0.03);
+}
+
+.inp input:not(:placeholder-shown)+span {
+    /* color: #5a667f; */
+    color: var(--primary-color);
+    transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus {
+    background: none;
+    outline: none;
+}
+
+.inp input:focus+span {
+    color: var(--dark-color);
+    transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus+span+.border {
+    transform: scaleX(1);
+    background: var(--dark-color);
+}
+
+#submit {
+    background: none;
+    color: inherit;
+    font: inherit;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    position: relative;
+    border-radius: 4px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow:hidden;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+
+#submit:hover {
+    border: 1px #fff solid;
+    background: var(--primary-color);
+    transform: scale(1.04, 1.04);
+    transition: border 0.3s ease-out;
+    transition: transform 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+footer {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--dark-color);
+}
+
+footer p {
+    position: absolute;
+    float: left;
+    padding: 0 20px;
+    color: white;
+}
+
+footer nav {
+    float: right;
+}
+
+footer nav a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.5s ease-in-out;
+}
+
+footer nav a:hover {
+    background: white;
+    color: var(--dark-color);
 }
 
 @media (max-width: 750px) {
@@ -301,5 +448,11 @@ html, body {
 @media screen and (max-width: 750px) {
     .col {
         flex: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    footer p {
+        display: none;
     }
 }
