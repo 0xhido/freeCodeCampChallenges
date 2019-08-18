@@ -159,6 +159,11 @@ html, body {
     height: auto;
 }
 
+.video-container iframe {
+    width: 50%;
+    height: 400px;
+}
+
 .video-container>h1 {
     color: rgba(0, 0, 0, .5);
 }
@@ -297,6 +302,8 @@ form {
 
 .inp input {
     -webkit-appearance: none;
+    position: relative;
+    z-index: 1;
     width: 100%;
     border: 0;
     font-family: inherit;
@@ -443,11 +450,18 @@ footer nav a:hover {
     .col {
         flex: 50%;
     }
+
+    .video-container iframe {
+        height: 300px;
+    }
 }
 
 @media screen and (max-width: 750px) {
     .col {
         flex: 100%;
+    }
+    .video-container iframe {
+        height: 200px;
     }
 }
 
