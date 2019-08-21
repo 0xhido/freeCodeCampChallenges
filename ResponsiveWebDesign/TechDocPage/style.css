@@ -14,6 +14,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.inv {
+    display: none;
+}
+
 #toggle-menu {
     display: none;
     position: fixed;
