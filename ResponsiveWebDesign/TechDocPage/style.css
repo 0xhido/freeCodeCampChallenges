@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 1em 2em 2em 30%;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+}
+
+#toggle-menu {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    background: #202124;
+}
+
+#toggle-menu>* {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 50px;
+    color: #aaa;
+}
+
+#toggle-menu i {
+    float: right;
+}
+
+#navbar {
+    display: inline-block;
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    padding: 1em;
+    width: 30%;
+    line-height: 2;
+    transition: .5s linear;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul ul {
+    padding-left: 2em;
+}
+
+#navbar li a {
+    display: inline-block;
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#navbar li.visible>a, #navbar li a:hover {
+    color: #111;
+    transform: translate(5px);
+    -webkit-transform: translate(5px);
+}
+
+.toc-marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.toc-marker path {
+    transition: all 0.3s ease;
+}
+
+.contents {
+    display: inline-block;
+    padding: 0 1em 1em 1em;
+    width: 100%;
+    font-size: 1.2em;
+    font-family: 'Frank Ruhl Libre', sans-serif;
+}
+
+.contents pre {
+    background: #eee;
+}
+
+@media (max-width: 1350px) {
+    .contents pre {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contents pre {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #navbar h1 {
+        font-size: 20px;
+    }
+    .contents pre {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 850px) {
+    #toggle-menu {
+        display: block;
+    }
+    body {
+        padding: 0;
+    }
+    #navbar {
+        left: -100%;
+        background: #202124;
+    }
+    #navbar header h1 {
+        /* color: whitesmoke; */
+        display: none;
+    }
+    #navbar li.visible>a, #navbar li a:hover {
+        color: whitesmoke;
+    }
+    #navbar.active {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 20em;
+        height: 100%;
+    }
+    .toc-marker {
+        display: none;
+    }
+}
